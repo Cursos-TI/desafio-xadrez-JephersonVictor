@@ -4,12 +4,12 @@
 // Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
-void movertorre (int movimento){
-  if (movimento > 0) {
-    movertorre (movimento  -1);
-    printf("Direita\n");
+void movertorre (int movimento){                   //condição de parada da recurção
+  if (movimento > 0) {                             // condiçao para mover a torre uma casa a menos
+    movertorre (movimento  -1);                     //
+    printf("Direita\n");                            // imprime a direção do movimento.
   }
-}
+}                                                     // explicação vale para as outras recursividades a seguir!!!!!!!!
 
 void moverBispo (int movimento1){
   if (movimento1 > 0) {
@@ -34,8 +34,8 @@ int i = 1;
 
 // Implementação de movimento da Torre
 
-printf("Movimento da Torre.\n");
-movertorre(5);
+printf("Movimento da Torre.\n");          
+movertorre(5);                   //quantidade de casas que a peça deve se mover.
 
 printf("\n");
 //Implementação de movimento do Bispo
@@ -64,15 +64,9 @@ printf("\n");
   
 }
 
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
-
     // Nível Mestre - Funções Recursivas e Loops Aninhados
-    // Sugestão: Substitua as movimentações das peças por funções recursivas.
-    // Exemplo: Crie uma função recursiva para o movimento do Bispo.
 
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
 
+  
     return 0;
 }
